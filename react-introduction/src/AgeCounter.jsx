@@ -1,7 +1,3 @@
-export function App() {
-  return "Hello";
-}
-
 export function AgeCounter(props) {
   let age = 30;
 
