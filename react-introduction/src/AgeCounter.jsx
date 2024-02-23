@@ -1,8 +1,10 @@
+import React, { useState } from "react";
+
 export function AgeCounter(props) {
-  let age = 30;
+  const [age, setAge] = useState(30);
 
   function increaseAge() {
-    age = age + 1;
+    setAge(age + 1);
   }
 
   return (
