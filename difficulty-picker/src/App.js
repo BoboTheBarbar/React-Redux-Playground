@@ -1,11 +1,16 @@
-import "./App.css";
-import DisplayDifficulty from "./DisplayDifficulty";
+import DisplayDifficulty from "./components/DisplayDifficulty/DisplayDifficulty";
+import MenuList from "./components/MenuList/MenuList";
 
 function App() {
   return (
-    <div>
-      <DisplayDifficulty difficulty="easy" />
-    </div>
+    <>
+      <div>
+        <DisplayDifficulty difficulty="medium" />
+      </div>
+      <div>
+        <MenuList items={["Home", "About", "Services", "Contact"]} />
+      </div>
+    </>
   );
 }
 
