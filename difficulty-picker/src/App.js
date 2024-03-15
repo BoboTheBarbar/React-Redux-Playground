@@ -8,7 +8,7 @@ function App() {
         <DisplayDifficulty difficulty="medium" />
       </div>
       <div>
-        <MenuList items={["Home", "About", "Services", "Contact"]} />
+        <MenuList items={["Low", "Medium", "Hard", "Insane"]} />
       </div>
     </>
   );
