@@ -13,14 +13,15 @@ const MenuList = (props) => {
 
   console.log(isHovered);
 
+  const backgroundColor = () => (isHovered ? "lightgray" : "white");
+
   return (
-    <div className={s.container} onMouseEnter={active} onMouseLeave={deactive}>
+    <div
+      onMouseEnter={active}
+      onMouseLeave={deactive}
+      style={{ backgroundColor: backgroundColor() }}
+    >
       Set to : {props.difficulty}
-      <ul>
-        {props.items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
     </div>
   );
 };
