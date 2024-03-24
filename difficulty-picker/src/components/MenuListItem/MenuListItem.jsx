@@ -15,8 +15,13 @@ const MenuListItem = (props) => {
 
   const backgroundColor = () => (isHovered ? "lightblue" : "lightgray");
 
+  const onItemClick = () => {
+    props.onClick(props.difficulty);
+  }
+
   return (
     <div
+      onClick={onItemClick}
       onMouseEnter={active}
       onMouseLeave={deactive}
       style={{ backgroundColor: backgroundColor() }}

@@ -1,15 +1,22 @@
 import DisplayDifficulty from "./components/DisplayDifficulty/DisplayDifficulty";
 import MenuList from "./components/MenuList/MenuList";
 import s from "./style.module.css";
+import { useState } from "react";
 
-function App() {
+export function App() {
+  const [currentDifficulty, setCurrentDifficulty] = useState("Insane");
+
+  const onMenuListItemClick = (difficulty) => {
+    setCurrentDifficulty(difficulty);
+  }
+
   return (
     <>
       <div>
         <h1>Select your difficulty</h1>
         <div className={s.workspace}>
-          <MenuList items={["Low", "Medium", "Hard", "Insane"]} />
-          <DisplayDifficulty difficulty="medium" />
+          <MenuList currentDifficulty={currentDifficulty} items={["Low", "Medium", "Hard", "Insane"]} onItemClick={onMenuListItemClick} />
+          <DisplayDifficulty difficulty={currentDifficulty} />
         </div>
       </div>
     </>
