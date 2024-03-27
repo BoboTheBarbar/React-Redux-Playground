@@ -6,7 +6,7 @@ const MenuList = (props) => {
     <>
       <div className={s.container}>
         {props.items.map((difficulty) => (
-          <MenuListItem difficulty={difficulty} onClick={props.onItemClick} />
+          <MenuListItem difficulty={difficulty} isSelected={props.currentDifficulty === difficulty} onClick={props.onItemClick} />
         ))}
       </div>
     </>

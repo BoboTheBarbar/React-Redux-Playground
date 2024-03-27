@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const MenuListItem = (props) => {
   const [isHovered, setIsHovered] = useState(false);
-
+  
   function active() {
     setIsHovered(true);
   }
@@ -13,7 +13,13 @@ const MenuListItem = (props) => {
 
   console.log(isHovered);
 
-  const backgroundColor = () => (isHovered ? "lightblue" : "lightgray");
+  const backgroundColor = () => {
+    if (isHovered) {
+      return "lightblue";
+    } else {
+      return props.isSelected ? "blue" : "lightgray";
+    }
+  };
 
   const onItemClick = () => {
     props.onClick(props.difficulty);
