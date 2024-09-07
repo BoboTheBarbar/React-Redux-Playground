@@ -1,7 +1,10 @@
+import { PasswordGeneratorCard } from "./components/PasswordGeneratorCard/PasswordGeneratorCard";
+import s from "./style.module.css";
+
 function App() {
   return (
-    <div>
-      Starter
+    <div className={s.root}>
+      <PasswordGeneratorCard />
     </div>
   );
 }
